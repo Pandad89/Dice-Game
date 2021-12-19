@@ -65,12 +65,22 @@ class GameBoard extends React.Component {
                 })
             }
         }
+        newGame = () => {
+            this.setState({
+                playerScore1: 0,
+                playerScore2: 0,
+                diceValue1: 0,
+                diceValue2: 0,
+                currentRollValue: 0,
+                activePlayer: true,
+            })
+        }
 
     render() {
         return (
             <div className='GameBoard'>
                 <Player  active={this.state.activePlayer} className="playerLeft" playerName="Player 1" totalScore={this.state.playerScore1} />
-                <Dice holdHandler={this.holdHandler} rollHandler={this.rollHandler} roll1={this.state.diceValue1} roll2={this.state.diceValue2} currentRoll={this.state.currentRollValue}/>
+                <Dice holdHandler={this.holdHandler} rollHandler={this.rollHandler} newGame={this.newGame} roll1={this.state.diceValue1} roll2={this.state.diceValue2} currentRoll={this.state.currentRollValue}/>
                 <Player active={!this.state.activePlayer} className="playerRight" playerName="Player 2" totalScore={this.state.playerScore2}/>
             </div>
         )

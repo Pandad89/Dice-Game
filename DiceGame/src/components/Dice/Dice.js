@@ -11,6 +11,7 @@ class Dice extends React.Component {
                 <h3>Current Roll: {this.props.currentRoll}</h3>
                 <button onClick={this.props.rollHandler}>Roll Dice</button>
                 <button onClick={this.props.holdHandler}>Hold</button>
+                <button onClick={this.props.newGame}>New Game</button>
             </div>
         )
     }
