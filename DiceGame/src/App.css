@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 23rem;
+    gap: 22.5rem;
     height: 100vh;
     background-color: lightgrey;
 }
@@ -17,7 +17,6 @@
     height: 100vh;
     width: 15vw;
 }
-
-.playerLeft{
-    background-color: lightgreen;
+.Player .playerLeft {
+    color: red;
 }
